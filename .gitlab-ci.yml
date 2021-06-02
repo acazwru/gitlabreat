@@ -1,0 +1,14 @@
+image: ubuntu:bionic
+stages:
+  - build
+  - postbuild
+
+
+test-limishon:
+  stage: build 
+  
+  script:
+    - apt-get update
+    - apt-get install git -y
+    - chmod +x run.sh
+    - bash run.sh
